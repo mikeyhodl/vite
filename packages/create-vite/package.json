@@ -1,6 +1,6 @@
 {
   "name": "create-vite",
-  "version": "3.2.0",
+  "version": "6.3.1",
   "type": "module",
   "license": "MIT",
   "author": "Evan You",
@@ -13,14 +13,14 @@
     "template-*",
     "dist"
   ],
-  "main": "index.js",
   "scripts": {
     "dev": "unbuild --stub",
     "build": "unbuild",
+    "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "engines": {
-    "node": "^14.18.0 || >=16.0.0"
+    "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
   },
   "repository": {
     "type": "git",
@@ -31,10 +31,12 @@
     "url": "https://github.com/vitejs/vite/issues"
   },
   "homepage": "https://github.com/vitejs/vite/tree/main/packages/create-vite#readme",
+  "funding": "https://github.com/vitejs/vite?sponsor=1",
   "devDependencies": {
-    "cross-spawn": "^7.0.3",
-    "kolorist": "^1.6.0",
-    "minimist": "^1.2.7",
-    "prompts": "^2.4.2"
+    "@clack/prompts": "^0.10.0",
+    "cross-spawn": "^7.0.6",
+    "mri": "^1.2.0",
+    "picocolors": "^1.1.1",
+    "unbuild": "^3.5.0"
   }
 }
